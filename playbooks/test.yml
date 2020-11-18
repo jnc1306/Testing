@@ -3,15 +3,11 @@
    gather_facts: yes
    become: yes
    tasks:
-     - name: Update Cache
-       apt:
-         update_cache: yes
-         
      - name: Patch host
        apt: 
          update_cache: yes
-         upgrade: yes
-         dist_upgrade: yes
+         upgrade: dist
+         
      
      
      - name: Install apache
