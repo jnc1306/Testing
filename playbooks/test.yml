@@ -3,6 +3,11 @@
    gather_facts: yes
    become: yes
    tasks:
+     - name: Update Cache
+       apt:
+         update_cache: yes
+     
+     
      - name: Install apache
        apt: 
          name: vsftpd
