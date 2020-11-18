@@ -6,6 +6,12 @@
      - name: Update Cache
        apt:
          update_cache: yes
+         
+     - name: Patch host
+       apt: 
+         update_cache: yes
+         upgrade: yes
+         dist_upgrade: yes
      
      
      - name: Install apache
